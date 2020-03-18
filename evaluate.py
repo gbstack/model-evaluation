@@ -23,6 +23,8 @@ parser.add_argument("--no-threshold", "-N", help="performance evaluation without
 parser.add_argument("--evaluation-output", "-o", help="output for result evaluation")
 args = parser.parse_args()
 test_names = args.test_name
+if test_names is None:
+    test_names = ['test']
 output_file = args.evaluation_output
 th = args.threshold
 
